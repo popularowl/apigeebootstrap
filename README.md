@@ -1,14 +1,24 @@
-# apigeebootstrap
+# Apigee Bootstrap
 
-bootstrap api project for Apigee Edge API development.
+Bootstrap api project for Apigee Edge API development.
 
-## Deploy
+It contains best practice setup for CI (Continuous integration lifecycle) and TDD (test driven development)
 
-This Apigee Edge API project is set for deployment with [Maven](https://maven.apache.org). Its using [Apigee Maven](https://github.com/apigee/apigee-deploy-maven-plugin) plugin to automate the actual bundle deployments.
+## Deployment
 
-	mvn install -P{environment name} -Dorganization={Apigee org name} -Dusername={Apigee username} -Dpassword={Apigee password} 
+Apigee Edge bootstrap api project is set for deployment with [Maven](https://maven.apache.org). Its using [Apigee Maven](https://github.com/apigee/apigee-deploy-maven-plugin) and [Apigee Config Maven](https://github.com/apigee/apigee-config-maven-plugin) plugins for deploying api and environment specific setup (target servers, kvm's, etc).
 
-## Tests
+Deploy API bundle
+
+	mvn install -P{environment name} -Dorganization={Apigee org name} -Dusername={Apigee username} -Dpassword={Apigee password}
+
+Deploy environment settings
+
+	mvn apigee-config:targetservers -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update 
+	mvn apigee-config:caches -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update 
+	mvn apigee-config:kvms -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update  
+
+## Testing
 
 API tests are created using Cucumberjs. To install dependencies use
 

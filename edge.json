@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "envConfig": {
+        "dev": {
+          "targetServers": [],
+          "caches": [],
+          "kvms": []
+        },
+        "prod": {}
+    },
+    "orgConfig": {}
+}
