@@ -1,0 +1,12 @@
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMessage.ErrorResponseJSON">
+    <DisplayName>AssignMessage.ErrorResponseJSON</DisplayName>
+    <Set>
+        <Headers>
+            <Header name="Content-Type">application/json</Header>
+         </Headers>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">{"error": "@customers.error.code#", "message": "@customers.error.message#"}</Payload>
+        <StatusCode>{customers.error.code}</StatusCode>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

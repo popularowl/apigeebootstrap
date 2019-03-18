@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    
+    <FaultRules/>
+
+    <!-- default fault rule. this part will always run in case errors raised during flow -->
+    <DefaultFaultRule name="all">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <!-- if no error messages assigned, create the default one -->
+        <Step>
+            <Name>AssignMessage.SetDefaultErrorValues</Name>
+            <Condition>(customers.error.message = null)</Condition>
+        </Step>
+        <Step>
+            <Name>AssignMessage.ErrorResponseJSON</Name>
+        </Step>
+    </DefaultFaultRule>
+
+    <!-- flow secenarios -->    
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>ExtractVariables.GetRequestVariables</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+
+    <Flows>
+        <Flow name="exampleFlow1">            
+            <Request/>
+            <Response/>          
+            <Condition>(request.verb = "GET")</Condition>
+        </Flow>
+
+        <Flow name="exampleFlow2">          
+            <Request/>
+            <Response/>                    
+            <Condition>(request.verb = "POST")</Condition>
+        </Flow>      
+        
+        <Flow name="notSupportedRequest">
+            <Request>
+                <Step>
+                    <Name>RaiseFault.NotSupportedRequest</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>    
+
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+
+    <RouteRule name="hostedtarget">
+        <TargetEndpoint>nodejs</TargetEndpoint>
+        <Condition>(request.verb = "GET")</Condition>
+    </RouteRule>
+        
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+
+    <HTTPProxyConnection>
+        <BasePath>/v1/customers</BasePath>
+        <!-- accepting both, http and https connections -->
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+</ProxyEndpoint>

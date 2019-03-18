@@ -1,0 +1,10 @@
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMessage.SetDefaultErrorValues">
+    <AssignVariable>
+      <Name>customers.error.code</Name>
+      <Value>500</Value>
+    </AssignVariable>
+    <AssignVariable>
+      <Name>customers.error.message</Name>
+      <Value>Internal Error</Value>
+    </AssignVariable>
+</AssignMessage>

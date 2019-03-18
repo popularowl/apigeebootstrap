@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractVariables.GetRequestVariables">
+    <DisplayName>ExtractVariables.GetRequestVariables</DisplayName>
+    <Properties/>
+    <QueryParam name="email">
+        <Pattern ignoreCase="true">{email}</Pattern>
+    </QueryParam>
+        <QueryParam name="name">
+        <Pattern ignoreCase="true">{name}</Pattern>
+    </QueryParam>
+        <QueryParam name="surname">
+        <Pattern ignoreCase="true">{surname}</Pattern>
+    </QueryParam>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>customers</VariablePrefix>
+</ExtractVariables>

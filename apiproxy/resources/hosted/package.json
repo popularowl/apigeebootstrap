@@ -1,0 +1,13 @@
+{
+    "name": "example-hosted-target",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+     "start": "node app.js"
+    },
+    "author": "popularowl labs",
+    "license": "",
+    "description": "example hosted nodejs application",
+    "dependencies": {
+    }
+}
