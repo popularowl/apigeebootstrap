@@ -1,10 +1,10 @@
 # Apigee Bootstrap
 
-Api framework for Apigee Edge api development.
+> Api framework for Apigee Edge api development and continuous deployment.
 
 The goal of this project is to provide the blueprint which includes the best practices for rapid api development on Apigee Edge platform.
 
-Apigee Bootstrap framework provides:
+## Apigee Bootstrap framework contains
 
 * Api deployment automation via [Maven](https://maven.apache.org)
 * Continuous Integration setup with pipeline examples for [Jenkins](https://jenkins.io) & [Circleci](https://circleci.com)
