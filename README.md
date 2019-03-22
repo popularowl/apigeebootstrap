@@ -2,18 +2,18 @@
 
 > Api framework for Apigee Edge api development and continuous deployment.
 
-The goal of this project is to provide the blueprint which includes the best practices for rapid api development on Apigee Edge platform.
+> The goal of this project is to provide the blueprint code which includes the best practices for rapid api development on Apigee Edge platform.
 
 ## Apigee Bootstrap framework contains
 
 * Api deployment automation via [Maven](https://maven.apache.org)
 * Continuous Integration setup with pipeline examples for [Jenkins](https://jenkins.io) & [Circleci](https://circleci.com)
-* Configuration management / dynamic values across multiple environments.
-* Optimised for Api performance in Apigee Edge.
+* Configuration management / dynamic values across multiple environments via version controlled key value maps.
+* Optimised for Api performance and low latency in Apigee Edge.
 * Api Error handling and management framework.
 * Build around TDD (test driven development) and BDD (behaviour driven development) principles.
-* Correlation id generation / propagation.
-* Logging integration to multiple platforms. [Loggly](loggly.com), [Elastic](https://www.elastic.co/elk-stack)
+* Correlation id generation / propagation examples.
+* Logging output / integration to multiple platforms. [Loggly](loggly.com), [Elastic](https://www.elastic.co/elk-stack)
 
 ## How to deploy?
 
