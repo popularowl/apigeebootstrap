@@ -38,9 +38,9 @@ Maven deployment will run tests automatically. To run tests manually use
 
 	./run-tests.sh
 
-## Tutorials
+## Tutorials / Posts
 
-* [Building apigee bootstrap](https://www.popularowl.com/blog/build-api-mocks-with-amokjs/) - detailed post why and how this project was built.
+* [Why use Apigee bootstrap framework?]() - (https://www.popularowl.com/blog/why-use-apigee-bootstrap-framework/) - detailed post why and how Apigee bootstrap framework project was built.
 * [Build API mocks with Amokjs](https://www.popularowl.com/blog/build-api-mocks-with-amokjs/) - using apigee bootstrap to host Nodejs applications in Apigee Edge
 
 
