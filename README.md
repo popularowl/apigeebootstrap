@@ -2,13 +2,14 @@
 
 > Api framework for Apigee Edge api development and continuous deployment.
 
-> The goal of this project is to provide the blueprint code which includes the best practices for rapid api development on Apigee Edge platform.
+> The goal of this project is to provide the blueprint code setup which includes the best practices for rapid api development lifecycle on Apigee Edge platform.
 
 ## Apigee Bootstrap framework contains
 
-* Api deployment automation via [Maven](https://maven.apache.org)
+* Api deployment automation via [Maven](https://maven.apache.org) and [Apigee deploy plugin](https://github.com/apigee/apigee-deploy-maven-plugin)
+* Platform setup as code via [Apigee config Maven plugin](https://github.com/apigee/apigee-config-maven-plugin)
 * Continuous Integration setup with pipeline examples for [Jenkins](https://jenkins.io) & [Circleci](https://circleci.com)
-* Configuration management / dynamic values across multiple environments via version controlled key value maps.
+* Dynamic endpoint configuration across multiple environments via version controlled key value maps.
 * Optimised for Api performance and low latency in Apigee Edge.
 * Api Error handling and management framework.
 * Build around TDD (test driven development) and BDD (behaviour driven development) principles.
@@ -40,7 +41,7 @@ Maven deployment will run tests automatically. To run tests manually use
 
 ## Tutorials / Posts
 
-* [Why use Apigee bootstrap framework?]() - (https://www.popularowl.com/blog/why-use-apigee-bootstrap-framework/) - detailed post why and how Apigee bootstrap framework project was built.
+* [Why use Apigee bootstrap framework?](https://www.popularowl.com/blog/why-use-apigee-api-bootstrap-framework/) - detailed post why and how Apigee bootstrap framework project was built.
 * [Build API mocks with Amokjs](https://www.popularowl.com/blog/build-api-mocks-with-amokjs/) - using apigee bootstrap to host Nodejs applications in Apigee Edge
 
 
@@ -50,4 +51,4 @@ Feedback and pull requests to this project are very welcome.
 
 ## OSS Licensing
 
-This project comes with [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) open source license. We are happy to provide commercial license for your business. [Contact us](https://github.com/sauliuz).
+This project comes with [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) open source license. We are happy to provide full commercial license for your business. [Contact us](https://github.com/sauliuz).
