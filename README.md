@@ -1,7 +1,7 @@
 # Apigee Bootstrap
 
-> Api framework for Apigee Edge api development and continuous deployment.
-> This project provides blueprint code setup, including the best practices for rapid Apigee Edge api development lifecycle.
+> Framework for API development and continuous deployment on Google Apigee Edge API management platform.
+> This project provides blueprint code setup and includes best practices for rapid Apigee Edge api development lifecycle.
 
 ## Apigee Bootstrap framework contains
 
@@ -9,11 +9,11 @@
 * Platform configuration setup as code via [Apigee config Maven plugin](https://github.com/apigee/apigee-config-maven-plugin)
 * Continuous Integration setup with pipeline examples for [Jenkins](https://jenkins.io) & [Circleci](https://circleci.com)
 * Dynamic endpoint configuration across multiple environments via version controlled key value maps.
-* Optimised for Api performance and low latency in Apigee Edge.
-* Api Error handling and management framework.
-* Build around TDD (test driven development) and BDD (behaviour driven development) principles.
+* Best practices for optimising API performance and low latency in Apigee Edge.
+* Error handling and management best practices.
+* Built with TDD (test driven development) and BDD (behaviour driven development) principles in mind.
 * Correlation id generation / propagation examples.
-* Logging output / integration to multiple platforms. [Loggly](loggly.com), [Elastic](https://www.elastic.co/elk-stack)
+* Logging integration examples to multiple logging platforms. [Loggly](loggly.com), [Elastic](https://www.elastic.co/elk-stack)
 
 ## How to deploy
 
@@ -31,9 +31,9 @@ Deploy environment settings
 
 ## How to run tests
 
-TDD api testing practices are implemented using [Cucumberjs](https://www.npmjs.com/package/cucumber).
+TDD api testing practices are implemented using [Cucumberjs](https://www.npmjs.com/package/cucumber) and [Apickli](https://github.com/apickli/apickli)
 
-Maven deployment will run tests automatically. To run tests manually use
+Maven configuration includes step to run tests automatically. In order to test manually see
 
     ./run-tests.sh
 
@@ -43,9 +43,9 @@ Maven deployment will run tests automatically. To run tests manually use
 * [Build API mocks with Amokjs](https://www.popularowl.com/blog/build-api-mocks-with-amokjs/) - using apigee bootstrap to host Nodejs applications in Apigee Edge.
 * [Apigee platform learning resources](https://community.apigee.com/articles/56382/apigee-api-platform-learning-guide.html) - large list of Apigee learning resources.
 
-## Feedback
+## Improvements
 
-Feedback and pull requests to this project are very welcome.
+Pull requests are welcome.
 
 ## OSS Licensing
 

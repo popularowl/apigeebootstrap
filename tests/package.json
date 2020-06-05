@@ -12,7 +12,7 @@
 	},
 	"license": "GPL-3.0",
 	"devDependencies": {
-		"apickli": "2.3.1",
+		"apickli": "2.3.3",
 		"cucumber": ">=5.1.0"
 	}
 }
