@@ -85,6 +85,7 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.6</version>
 				<executions>
+					
 					<execution>
 						<id>copy-node-resources</id>
 						<phase>package</phase>
@@ -111,9 +112,9 @@
 			<plugin>
 				<groupId>io.apigee.build-tools.enterprise4g</groupId>
 				<artifactId>apigee-edge-maven-plugin</artifactId>
-				<version>1.1.7</version>
+				<version>1.2.1</version> <!-- usinf v 1.x.x as v2.x.x has breaking changes. https://mvnrepository.com/artifact/io.apigee.build-tools.enterprise4g/apigee-edge-maven-plugin -->
 				<configuration>
-					 <!--Use this module level config to skip module build. Make it true -->
+					<!--Use this module level config to skip module build. Make it true -->
 					<skip>false</skip> 
 				</configuration>
 				<executions>
