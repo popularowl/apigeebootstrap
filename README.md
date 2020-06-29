@@ -23,7 +23,11 @@ Deploy API bundle
 
     mvn install -P{environment name} -Dorganization={Apigee org name} -Dusername={Apigee username} -Dpassword={Apigee password}
 
-Deploy environment settings
+In order to simplify deployments from local development machine you can use local [Maven settings file](https://maven.apache.org/settings.html) setup to setup default username and password to be used by Maven tool for different enviroenments. See [Maven configuration guide](MavenSetup.md). Deployment command becomes much simplified
+
+    mvn install -P{environment name} -Dorganization={Apigee org name}
+
+In order to deploy environment settings use the following
 
     mvn apigee-config:targetservers -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update 
     mvn apigee-config:caches -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update 
