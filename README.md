@@ -10,7 +10,7 @@
 * Continuous Integration setup with pipeline examples for [Jenkins](https://jenkins.io) & [Circleci](https://circleci.com)
 * Dynamic endpoint configuration across multiple environments via version controlled key value maps.
 * Best practices for optimising API performance and low latency in Apigee Edge.
-* Error handling and management best practices.
+* Implemented [Apigee error handling pattern](https://community.apigee.com/articles/23724/an-error-handling-pattern-for-apigee-proxies.html).
 * Built with TDD (test driven development) and BDD (behaviour driven development) principles in mind.
 * Correlation id generation / propagation examples.
 * Logging integration examples to multiple logging platforms. [Loggly](loggly.com), [Elastic](https://www.elastic.co/elk-stack)
@@ -19,11 +19,11 @@
 
 Apigee Edge bootstrap api project is set for deployment with [Maven](https://maven.apache.org). Its using [Apigee Maven](https://github.com/apigee/apigee-deploy-maven-plugin) and [Apigee Config Maven](https://github.com/apigee/apigee-config-maven-plugin) plugins for deploying api and environment specific setup (target servers, kvm's, etc).
 
-Deploy API bundle
+Basic deployment of API bundle to Apigee Edge
 
     mvn install -P{environment name} -Dorganization={Apigee org name} -Dusername={Apigee username} -Dpassword={Apigee password}
 
-In order to simplify deployments from local development machine you can use local [Maven settings file](https://maven.apache.org/settings.html) setup to setup default username and password to be used by Maven tool for different enviroenments. See [Maven configuration guide](MavenSetup.md). Deployment command becomes much simplified
+We can simplify the deployment command using local [Maven settings file](https://maven.apache.org/settings.html) to setup default username and password to be used by Maven during build. See [Maven configuration guide](MavenSetup.md).
 
     mvn install -P{environment name} -Dorganization={Apigee org name}
 

@@ -7,7 +7,7 @@
     <!-- default fault rule. this part will always run in case errors raised during flow -->
     <DefaultFaultRule name="all">
         <AlwaysEnforce>true</AlwaysEnforce>
-        <!-- if no error messages assigned, create the default one -->
+        <!-- if no error variables assigned, create the default one -->
         <Step>
             <Name>AssignMessage.SetDefaultErrorValues</Name>
             <Condition>(customers.error.message = null)</Condition>
