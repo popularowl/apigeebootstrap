@@ -17,13 +17,25 @@
 
 ## How to deploy
 
-Apigee Edge bootstrap api project is set for deployment with [Maven](https://maven.apache.org). Its using [Apigee Maven](https://github.com/apigee/apigee-deploy-maven-plugin) and [Apigee Config Maven](https://github.com/apigee/apigee-config-maven-plugin) plugins for deploying api and environment specific setup (target servers, kvm's, etc).
+Apigee bootstrap api project is set for deployment with [Maven](https://maven.apache.org). Its using [Apigee Maven](https://github.com/apigee/apigee-deploy-maven-plugin) and [Apigee Config Maven](https://github.com/apigee/apigee-config-maven-plugin) plugins for deploying api and environment specific setup (target servers, kvm's, etc).
 
-Basic deployment of API bundle to Apigee Edge
+## Set local environment variables
 
-    mvn install -P{environment name} -Dorganization={Apigee org name} -Dusername={Apigee username} -Dpassword={Apigee password}
+Apigee bootstrap is configured to receive deployment information from the comand line, but requires to set deployment username and deployment password as local environment variables for best security and continuous integration practices. You have to set APIGEE_USERNAME and APIGEE_PASSWORD in order for deployments to succeeed.
 
-We can simplify the deployment command using local [Maven settings file](https://maven.apache.org/settings.html) to setup default username and password to be used by Maven during build. See [Maven configuration guide](MavenSetup.md).
+Set local variables on Unix / Linux machines
+
+    export APIGEE_USERNAME=your username
+    export APIGEE_PASSWORD=your password
+
+[Set local variables on Windows](https://ss64.com/nt/) machines
+
+    setx APIGEE_USERNAME "your username"
+    setx APIGEE_PASSWORD "your password"
+
+## Deploy API bundle
+
+After setting above environment variables in order to deploy API bundle you can run the following
 
     mvn install -P{environment name} -Dorganization={Apigee org name}
 
