@@ -13,15 +13,17 @@
 * Implemented [Apigee error handling pattern](https://community.apigee.com/articles/23724/an-error-handling-pattern-for-apigee-proxies.html).
 * Built with TDD (test driven development) and BDD (behaviour driven development) principles in mind.
 * Correlation id generation / propagation examples.
-* Logging integration examples to multiple logging platforms. [Loggly](loggly.com), [Elastic](https://www.elastic.co/elk-stack)
+* Logging integration examples to multiple logging platforms.
 
 ## How to deploy
 
-Apigee bootstrap api project is set for deployment with [Maven](https://maven.apache.org). Its using [Apigee Maven](https://github.com/apigee/apigee-deploy-maven-plugin) and [Apigee Config Maven](https://github.com/apigee/apigee-config-maven-plugin) plugins for deploying api and environment specific setup (target servers, kvm's, etc).
+Apigee bootstrap project is configured for deployment with [Maven](https://maven.apache.org). Its using [Apigee Maven](https://github.com/apigee/apigee-deploy-maven-plugin) and [Apigee Config Maven](https://github.com/apigee/apigee-config-maven-plugin) plugins for deploying apis and environment specific setup (target servers, kvm's, etc).
 
 ## Set local environment variables
 
-Apigee bootstrap is configured to receive deployment information from the comand line, but requires to set deployment username and deployment password as local environment variables for best security and continuous integration practices. You have to set APIGEE_USERNAME and APIGEE_PASSWORD in order for deployments to succeeed.
+During deployment, Apigee bootstrap receives deployment information from the comand line arguments. It also requires you to set deployment username and deployment password as environment variables for the best security and continuous integration practices. 
+
+You have to set APIGEE_USERNAME and APIGEE_PASSWORD in order for deployments to succeeed.
 
 Set local variables on Unix / Linux machines
 
