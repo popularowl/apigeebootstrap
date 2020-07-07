@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <RaiseFault async="false" continueOnError="false" enabled="true" name="RaiseFault.NotSupportedRequest">
-    <DisplayName>RaiseFault.NotSupportedRequest</DisplayName>
+    <DisplayName>RaiseFault.NotSupportedRequest</DisplayName>    
     <FaultResponse>
-        <Set>
-            <Payload contentType="application/json">{"status":"400", "message":"not supported request format"}</Payload>
-            <StatusCode>400</StatusCode>  
-        </Set>
+        <!--
+           We are using centralised error handling and formating with DefaultFaultRule.
+           This means that each time we generate an error in Apigee flow,
+           instead of asigning error payload we are setting up error variables. 
+           These variables will be used to create error response in DefaultFaultRule.   
+        -->
+        <AssignVariable>
+            <Name>customers.error.code</Name>
+            <Value>400</Value>
+        </AssignVariable>
+        <AssignVariable>
+            <Name>customers.error.message</Name>
+            <Value>Bad request</Value>
+        </AssignVariable>
     </FaultResponse>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
 </RaiseFault>
