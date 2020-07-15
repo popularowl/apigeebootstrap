@@ -13,6 +13,8 @@
 	"license": "GPL-3.0",
 	"devDependencies": {
 		"apickli": "2.3.3",
-		"cucumber": "6.0.5"
-	}
+		"cucumber": "6.0.5",
+		"eslint": "^7.4.0"
+	},
+	"dependencies": {}
 }
