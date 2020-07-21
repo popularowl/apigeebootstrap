@@ -10,3 +10,6 @@ fi
 
 # use npx to run cucumber-js tests
 npx cucumber-js integration-tests
+
+# in order to run specific tags from feature files
+# npx cucumber-js integration-tests --tags @prod

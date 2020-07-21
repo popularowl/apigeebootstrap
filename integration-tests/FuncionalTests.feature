@@ -1,6 +1,7 @@
 Feature: Validating customers API funcionality
 	As an API developer, I want to validate that customers API has all the required funcionality
 	
+	@prod
 	Scenario: I should get successful json response for example request
 		When I GET /v1/customers
 		Then response code should be 200
