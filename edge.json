@@ -2,9 +2,37 @@
     "version": "1.0",
     "envConfig": {
         "dev": {
-          "targetServers": [],
-          "caches": [],
-          "kvms": []
+          "targetServers": [
+            {
+              "name":"httpbin",
+              "host":"httpbin.org",
+              "isEnabled":true,
+              "port":80
+            }
+          ],
+          "caches": [
+            {
+              "name":"apigeebootstrapcache",
+              "description":"apigeebootstrap cache",
+              "expirySettings":{
+                 "timeoutInSec":{
+                    "value":"300"
+                 },
+                 "valuesNull":false
+              }
+            }
+          ],
+          "kvms": [
+            {
+              "name": "customer_api_values",
+              "entry": [
+                {
+                  "name": "spike_rate",
+                  "value": "1ps"
+                }
+              ]
+            }
+          ]
         },
         "prod": {}
     },

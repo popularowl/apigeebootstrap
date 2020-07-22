@@ -30,8 +30,8 @@
         <org.slf4j.simpleLogger.defaultLogLevel>info</org.slf4j.simpleLogger.defaultLogLevel>
         <project.root.dir>${basedir}</project.root.dir>
         <target.root.dir>${basedir}/target</target.root.dir>
-    </properties>
-	
+  </properties>
+
 	<!-- This is where you add the environment specific properties under various profile names -->
 	<!-- For apigee.options, refer to "Advanced Configuration Options" under https://github.com/apigee/apigee-deploy-maven-plugin#pom-xml-sample -->
 	<profiles>
@@ -78,14 +78,42 @@
 	
 	<build>
 		
-		<plugins>			
+		<plugins>
+			<!-- configurations as a code -->
+			<plugin>
+      	<groupId>com.apigee.edge.config</groupId>
+        <artifactId>apigee-config-maven-plugin</artifactId>
+        <version>1.4.3</version>
+        <executions>
+					<execution>
+							<id>create-config-cache</id>
+							<phase>install</phase>                        
+							<goals>
+									<goal>caches</goal>
+							</goals>
+					</execution>
+					<execution>
+							<id>create-config-kvm</id>
+							<phase>install</phase>                        
+							<goals>
+									<goal>keyvaluemaps</goal>
+							</goals>
+					</execution>
+					<execution>
+							<id>create-config-targetserver</id>
+							<phase>install</phase>                        
+							<goals>
+									<goal>targetservers</goal>
+							</goals>
+					</execution>
+        </executions>
+      </plugin>
 			
 			<!-- copy the full apiproxy folder to target folder -->
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.6</version>
-				<executions>
-					
+				<executions>					
 					<execution>
 						<id>copy-node-resources</id>
 						<phase>package</phase>

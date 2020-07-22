@@ -47,7 +47,7 @@ In order to deploy environment settings use the following
 
     mvn apigee-config:targetservers -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update 
     mvn apigee-config:caches -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update 
-    mvn apigee-config:kvms -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update  
+    mvn apigee-config:keyvaluemaps -P{environment name} -Dorganization={Apigee org name} -Dapigee.config.options=update  
 
 ## How to run tests
 
