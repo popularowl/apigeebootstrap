@@ -21,9 +21,11 @@ Apigee bootstrap project is configured for deployment with [Maven](https://maven
 
 ## Set local environment variables
 
-During deployment, Apigee bootstrap receives deployment information from the comand line arguments. It also requires you to set deployment username and deployment password as environment variables for the best security and continuous integration practices. 
+During deployment, Apigee bootstrap receives deployment information from the arguments privided to Maven build command.
 
-You have to set APIGEE_USERNAME and APIGEE_PASSWORD in order for deployments to succeeed.
+In order to succesfully deploy API bundle, Apigee username and deployment password have to be provided. Apigee bootstrap expects these values to be setup as the environment variables for the best security and continuous integration practices.
+
+You have to set APIGEE_USERNAME and APIGEE_PASSWORD in order for API bundle deployments to succeeed.
 
 Set local variables on Unix / Linux machines
 
@@ -49,11 +51,14 @@ In order to deploy environment settings use the following
 
 ## How to run tests
 
-TDD api testing practices are implemented using [Cucumberjs](https://www.npmjs.com/package/cucumber) and [Apickli](https://github.com/apickli/apickli)
+Apigee bootstrap includes 2 types of tests.
 
-Maven configuration includes step to run tests automatically. In order to test manually see
+Code quality testing for JS extention code using [Eslint](https://eslint.org/) and unit tests and [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) based API integration tests based on [Cucumberjs](https://www.npmjs.com/package/cucumber) and [Apickli](https://github.com/apickli/apickli).
 
-    ./run-tests.sh
+Both test groups can be run manually
+
+    ./run-code-tests.sh
+    ./run-integration-tests.sh
 
 ## Related Tutorials / Posts
 
@@ -63,7 +68,7 @@ Maven configuration includes step to run tests automatically. In order to test m
 
 ## Improvements
 
-Pull requests are welcome.
+See outstanding issues for contribution ideas. Pull requests are welcome.
 
 ## OSS Licensing
 
