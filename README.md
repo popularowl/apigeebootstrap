@@ -72,4 +72,6 @@ See outstanding issues for contribution ideas. Pull requests are welcome.
 
 ## OSS Licensing
 
+Maintained by [popularowl.cọm](https://popularowl.com) 
+
 This project comes with [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) open source license. We are happy to provide full commercial license for your business. [Contact us](https://github.com/sauliuz).
