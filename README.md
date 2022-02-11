@@ -3,6 +3,8 @@
 > Framework for API development and continuous deployment on Google Apigee Edge API management platform.
 > This project provides blueprint code setup and includes best practices for rapid Apigee Edge api development lifecycle.
 
+> creaded by [@sauliuz](https://github.com/sauliuz) - get in touch if you are looking for Apigee expertise
+
 ## Apigee Bootstrap framework contains
 
 * Api deployment automation via [Maven](https://maven.apache.org) and [Apigee deploy plugin](https://github.com/apigee/apigee-deploy-maven-plugin)
